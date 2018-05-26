@@ -9,7 +9,7 @@ db = SQLAlchemy(app)
 class Person(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(255))
-  pets = db.relationship('Pet', backref='owner', lazy='dynamic')
+  pets = db.relationship('Pet', backref='owner')
 
 
 class Pet(db.Model):
