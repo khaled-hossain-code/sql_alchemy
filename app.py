@@ -6,6 +6,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:zxc90zxc@0.0.0.0/a
 db = SQLAlchemy(app)
 
 class Example(db.Model):
-  id = db.Column('id', db.Integer, primary_key=True)
-  ex_text = db.Column('ex_text', db.String(255))
+  id = db.Column(db.Integer, primary_key=True)
+  ex_text = db.Column(db.String(255))
 
